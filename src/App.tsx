@@ -1,3 +1,4 @@
+import CssBaseline from '@mui/material/CssBaseline';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 
@@ -8,6 +9,7 @@ function App() {
 	return (
 		<Provider store={appStore}>
 			<PersistGate persistor={appPeristor}>
+				<CssBaseline />
 				<AppRoutes />
 			</PersistGate>
 		</Provider>

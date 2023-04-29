@@ -78,7 +78,7 @@ export const { selectAll: listarTodosContatos, selectById: listaPorEmail } =
 	adapterContato.getSelectors((state: RootState) => state.contatos);
 
 const contatosSlice = createSlice({
-	name: 'sliceName',
+	name: 'contatos',
 	initialState: adapterContato.getInitialState(),
 	reducers: {
 		adicionar: adapterContato.addOne,
@@ -89,3 +89,17 @@ const contatosSlice = createSlice({
 
 export const { excluir, adicionar, atualizar } = contatosSlice.actions;
 export default contatosSlice.reducer;
+
+/*
+
+{
+	ids: [1, 2, 3, 4],
+	entities: {
+		1: { },
+		2: { },
+
+	}
+}
+
+
+*/
